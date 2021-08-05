@@ -6,7 +6,6 @@ export default function VoteButtons({ upvotes, downvotes, vote, setVotes, id }) 
             if (action === "increase")
                 setVotes(prev => {
                     return prev.map((element) => {
-                        console.log(element)
                         if (element.id === id)
                             return { ...element, voted: "up", upvotes: element.upvotes + 1, downvotes: element.downvotes }
                         return element
